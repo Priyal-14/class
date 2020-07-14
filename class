@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+class time
+{
+  private:
+	int hour;
+	int minute;
+	int seconds;
+  public:
+           displaytime();
+         int displayseconds()
+	{
+	   int totalsec;
+	   totalsec=(3600*hour)+(60*minute)+(seconds);
+	}
+};
+time :: displaytime()
+{
+   cout<<"enter time\n";
+   cin>>hour>>minute>>seconds;
+   cout<<hour<<":"<<minute<<":"<<seconds<<"\n";
+
+}
+ time ::  displayseconds()
+{
+   cout<<"total seconds\n";
+   cout<<totalsec;
+   return(totalsec);
+}
+ main()
+{
+    time t1;
+    t1.displaytime();
+    t1.displayseconds();
+}
+
