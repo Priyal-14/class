@@ -1,7 +1,5 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
-
 class time
 {
   private:
@@ -9,30 +7,32 @@ class time
 	int minute;
 	int seconds;
   public:
-           displaytime();
-         int displayseconds()
+        displaytime();
+        displayseconds()
 	{
 	   int totalsec;
-	   totalsec=(3600*hour)+(60*minute)+(seconds);
+	   totalsec=3600*hour+60*minute+1*seconds;
+	   cout<<totalsec<<"\n";
 	}
 };
-time :: displaytime()
+ time :: displaytime()
 {
-   cout<<"enter time\n";
-   cin>>hour>>minute>>seconds;
-   cout<<hour<<":"<<minute<<":"<<seconds<<"\n";
+   cout<<"hour:\n";
+   cin>>hour;
+   cout<<"minute:\n";
+   cin>>minute;
+   cout<<"seconds:\n";
+   cin>>seconds;
+   cout<<"time format="<<hour<<":"<<minute<<":"<<seconds<<"\n";
 
 }
- time ::  displayseconds()
+ 
+int main()
 {
-   cout<<"total seconds\n";
-   cout<<totalsec;
-   return(totalsec);
-}
- main()
-{
+    
     time t1;
     t1.displaytime();
     t1.displayseconds();
+    
 }
 
